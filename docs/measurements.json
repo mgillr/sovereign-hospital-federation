@@ -1,0 +1,2275 @@
+{
+ "robust_nodp_none": {
+  "rounds": 7,
+  "failed_rounds": [],
+  "round_seconds_median": 0.224,
+  "ticks_median": 12,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 208,
+  "duplicates_per_round_median": 44,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8347,
+  "gate_passed": [
+   true,
+   true,
+   true,
+   false,
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {
+   "4": [
+    "IT"
+   ]
+  },
+  "selected": [
+   [
+    "CH",
+    "FR"
+   ],
+   [
+    "DE",
+    "AT"
+   ],
+   [
+    "IT",
+    "AT"
+   ],
+   [
+    "AT",
+    "IT"
+   ],
+   [
+    "IT",
+    "AT"
+   ],
+   [
+    "IT",
+    "AT"
+   ],
+   [
+    "IT",
+    "AT"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 1,
+    "admitted": 7
+   },
+   "DE": {
+    "selected": 1,
+    "admitted": 7
+   },
+   "FR": {
+    "selected": 1,
+    "admitted": 7
+   },
+   "AT": {
+    "selected": 6,
+    "admitted": 7
+   },
+   "IT": {
+    "selected": 5,
+    "admitted": 7
+   }
+  },
+  "quorum_signers": [
+   5,
+   5,
+   4,
+   5,
+   5,
+   5,
+   5
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "817d3f2b83579c5c530429c14f5932b191970215e376b241cdd7e9ba96ca8684",
+  "epsilon_max": null,
+  "epsilon_per_node": null
+ },
+ "robust_nodp_poison": {
+  "rounds": 7,
+  "failed_rounds": [],
+  "round_seconds_median": 0.197,
+  "ticks_median": 12,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 208,
+  "duplicates_per_round_median": 44,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8367,
+  "gate_passed": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "FR",
+    "CH"
+   ],
+   [
+    "AT",
+    "CH"
+   ],
+   [
+    "CH",
+    "AT"
+   ],
+   [
+    "AT",
+    "FR"
+   ],
+   [
+    "AT",
+    "FR"
+   ],
+   [
+    "FR",
+    "CH"
+   ],
+   [
+    "CH",
+    "AT"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 5,
+    "admitted": 7
+   },
+   "DE": {
+    "selected": 0,
+    "admitted": 7
+   },
+   "FR": {
+    "selected": 4,
+    "admitted": 7
+   },
+   "AT": {
+    "selected": 5,
+    "admitted": 7
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 7
+   }
+  },
+  "quorum_signers": [
+   5,
+   5,
+   4,
+   5,
+   5,
+   5,
+   5
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "21466d8a0a9161240c16ccdcb6042c590d8832436c6b98a814fb3fc38f03380d",
+  "epsilon_max": null,
+  "epsilon_per_node": null
+ },
+ "robust_dp_none": {
+  "rounds": 7,
+  "failed_rounds": [],
+  "round_seconds_median": 0.239,
+  "ticks_median": 12,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 208,
+  "duplicates_per_round_median": 44,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8367,
+  "gate_passed": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "AT",
+    "DE"
+   ],
+   [
+    "IT",
+    "DE"
+   ],
+   [
+    "DE",
+    "IT"
+   ],
+   [
+    "AT",
+    "IT"
+   ],
+   [
+    "IT",
+    "AT"
+   ],
+   [
+    "DE",
+    "AT"
+   ],
+   [
+    "CH",
+    "AT"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 1,
+    "admitted": 7
+   },
+   "DE": {
+    "selected": 4,
+    "admitted": 7
+   },
+   "FR": {
+    "selected": 0,
+    "admitted": 7
+   },
+   "AT": {
+    "selected": 5,
+    "admitted": 7
+   },
+   "IT": {
+    "selected": 4,
+    "admitted": 7
+   }
+  },
+  "quorum_signers": [
+   5,
+   5,
+   4,
+   5,
+   5,
+   5,
+   5
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "04aad6eec0801eef5d7220ad7e36039d14b847f9f3bffee898a4f321e2852991",
+  "epsilon_max": 2.2102,
+  "epsilon_per_node": {
+   "CH": 1.5064,
+   "DE": 1.5064,
+   "FR": 1.5064,
+   "AT": 2.2102,
+   "IT": 1.6866
+  }
+ },
+ "robust_dp_poison": {
+  "rounds": 7,
+  "failed_rounds": [],
+  "round_seconds_median": 0.229,
+  "ticks_median": 12,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 208,
+  "duplicates_per_round_median": 44,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8373,
+  "gate_passed": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "DE",
+    "AT"
+   ],
+   [
+    "DE",
+    "FR"
+   ],
+   [
+    "DE",
+    "AT"
+   ],
+   [
+    "CH",
+    "AT"
+   ],
+   [
+    "AT",
+    "CH"
+   ],
+   [
+    "AT",
+    "DE"
+   ],
+   [
+    "AT",
+    "CH"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 3,
+    "admitted": 7
+   },
+   "DE": {
+    "selected": 4,
+    "admitted": 7
+   },
+   "FR": {
+    "selected": 1,
+    "admitted": 7
+   },
+   "AT": {
+    "selected": 6,
+    "admitted": 7
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 7
+   }
+  },
+  "quorum_signers": [
+   5,
+   5,
+   4,
+   5,
+   5,
+   5,
+   5
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "7cbbe870ef889a9bda0aac5cac32d4cc44e1034feb31724c32ece9c15bc05179",
+  "epsilon_max": 2.2102,
+  "epsilon_per_node": {
+   "CH": 1.5064,
+   "DE": 1.5064,
+   "FR": 1.5064,
+   "AT": 2.2102,
+   "IT": 1.6866
+  }
+ },
+ "blind_nodp_none": {
+  "rounds": 7,
+  "failed_rounds": [],
+  "round_seconds_median": 0.265,
+  "ticks_median": 12,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 208,
+  "duplicates_per_round_median": 44,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8387,
+  "gate_passed": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "FR",
+    "IT",
+    "DE",
+    "AT",
+    "CH"
+   ],
+   [
+    "CH",
+    "FR",
+    "IT",
+    "DE",
+    "AT"
+   ],
+   [
+    "DE",
+    "FR",
+    "AT",
+    "CH",
+    "IT"
+   ],
+   [
+    "FR",
+    "IT",
+    "AT",
+    "DE",
+    "CH"
+   ],
+   [
+    "CH",
+    "AT",
+    "IT",
+    "FR",
+    "DE"
+   ],
+   [
+    "CH",
+    "IT",
+    "DE",
+    "FR",
+    "AT"
+   ],
+   [
+    "IT",
+    "FR",
+    "AT",
+    "DE",
+    "CH"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "DE": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "FR": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "AT": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "IT": {
+    "selected": 7,
+    "admitted": 7
+   }
+  },
+  "quorum_signers": [
+   5,
+   5,
+   4,
+   5,
+   5,
+   5,
+   5
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "5b3444d02f01e12b0b03b554b6d27a18a14075a1002c925abc10dcd3e6b99913",
+  "epsilon_max": null,
+  "epsilon_per_node": null
+ },
+ "blind_nodp_poison": {
+  "rounds": 7,
+  "failed_rounds": [],
+  "round_seconds_median": 0.188,
+  "ticks_median": 11,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 184,
+  "duplicates_per_round_median": 40,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8367,
+  "gate_passed": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "AT",
+    "CH",
+    "FR",
+    "DE"
+   ],
+   [
+    "CH",
+    "DE",
+    "AT",
+    "FR"
+   ],
+   [
+    "FR",
+    "DE",
+    "CH",
+    "AT"
+   ],
+   [
+    "FR",
+    "AT",
+    "CH",
+    "DE"
+   ],
+   [
+    "AT",
+    "DE",
+    "FR",
+    "CH"
+   ],
+   [
+    "CH",
+    "AT",
+    "FR",
+    "DE"
+   ],
+   [
+    "DE",
+    "AT",
+    "CH",
+    "FR"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "DE": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "FR": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "AT": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 0
+   }
+  },
+  "quorum_signers": [
+   4,
+   4,
+   4,
+   4,
+   3,
+   3,
+   4
+  ],
+  "quorum_Q": [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [
+    [
+     "IT"
+    ]
+   ],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "quarantined": [
+   "IT"
+  ],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "f3c72a609ce647ce7530ec25146d7bf6bfd1c7ae279ca4f9011ddf96145e18e1",
+  "epsilon_max": null,
+  "epsilon_per_node": null
+ },
+ "blind_dp_none": {
+  "rounds": 7,
+  "failed_rounds": [],
+  "round_seconds_median": 0.251,
+  "ticks_median": 12,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 208,
+  "duplicates_per_round_median": 44,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8353,
+  "gate_passed": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "CH",
+    "DE",
+    "AT",
+    "IT",
+    "FR"
+   ],
+   [
+    "AT",
+    "FR",
+    "IT",
+    "CH",
+    "DE"
+   ],
+   [
+    "CH",
+    "AT",
+    "IT",
+    "FR",
+    "DE"
+   ],
+   [
+    "IT",
+    "DE",
+    "CH",
+    "AT",
+    "FR"
+   ],
+   [
+    "AT",
+    "CH",
+    "DE",
+    "IT",
+    "FR"
+   ],
+   [
+    "IT",
+    "AT",
+    "CH",
+    "DE",
+    "FR"
+   ],
+   [
+    "CH",
+    "FR",
+    "DE",
+    "AT",
+    "IT"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "DE": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "FR": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "AT": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "IT": {
+    "selected": 7,
+    "admitted": 7
+   }
+  },
+  "quorum_signers": [
+   5,
+   5,
+   4,
+   5,
+   5,
+   5,
+   5
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "a8e81f94ae6ed9599948db85adb35930ed5c463b3b77024287a21d00e87b2dd7",
+  "epsilon_max": 2.2102,
+  "epsilon_per_node": {
+   "CH": 1.5064,
+   "DE": 1.5064,
+   "FR": 1.5064,
+   "AT": 2.2102,
+   "IT": 1.6866
+  }
+ },
+ "blind_dp_poison": {
+  "rounds": 7,
+  "failed_rounds": [],
+  "round_seconds_median": 0.217,
+  "ticks_median": 12,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 196,
+  "duplicates_per_round_median": 36,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.836,
+  "gate_passed": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "CH",
+    "FR",
+    "DE",
+    "AT"
+   ],
+   [
+    "CH",
+    "FR",
+    "AT",
+    "DE"
+   ],
+   [
+    "DE",
+    "AT",
+    "CH",
+    "FR"
+   ],
+   [
+    "AT",
+    "CH",
+    "DE",
+    "FR"
+   ],
+   [
+    "CH",
+    "AT",
+    "DE",
+    "FR"
+   ],
+   [
+    "DE",
+    "AT",
+    "FR",
+    "CH"
+   ],
+   [
+    "AT",
+    "CH",
+    "DE",
+    "FR"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "DE": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "FR": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "AT": {
+    "selected": 7,
+    "admitted": 7
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 0
+   }
+  },
+  "quorum_signers": [
+   3,
+   4,
+   4,
+   4,
+   3,
+   4,
+   4
+  ],
+  "quorum_Q": [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [
+    [
+     "IT"
+    ]
+   ],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "quarantined": [
+   "IT"
+  ],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "43dc5dc5a928b0494a87fb7dcee46f0c5db4456ebf47de9251223612861ed8c8",
+  "epsilon_max": 2.2102,
+  "epsilon_per_node": {
+   "CH": 1.5064,
+   "DE": 1.5064,
+   "FR": 1.5064,
+   "AT": 2.2102,
+   "IT": 0.7101
+  }
+ },
+ "robust_nodp_poison_NO_lr_decay": {
+  "rounds": 7,
+  "failed_rounds": [],
+  "round_seconds_median": 0.196,
+  "ticks_median": 12,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 208,
+  "duplicates_per_round_median": 44,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.836,
+  "gate_passed": [
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   false
+  ],
+  "gate_failures": {
+   "5": [
+    "FR",
+    "IT"
+   ],
+   "7": [
+    "FR",
+    "IT"
+   ]
+  },
+  "selected": [
+   [
+    "FR",
+    "CH"
+   ],
+   [
+    "AT",
+    "CH"
+   ],
+   [
+    "AT",
+    "CH"
+   ],
+   [
+    "FR",
+    "AT"
+   ],
+   [
+    "AT",
+    "FR"
+   ],
+   [
+    "DE",
+    "FR"
+   ],
+   [
+    "AT",
+    "CH"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 4,
+    "admitted": 7
+   },
+   "DE": {
+    "selected": 1,
+    "admitted": 7
+   },
+   "FR": {
+    "selected": 4,
+    "admitted": 7
+   },
+   "AT": {
+    "selected": 5,
+    "admitted": 7
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 7
+   }
+  },
+  "quorum_signers": [
+   5,
+   5,
+   4,
+   5,
+   5,
+   5,
+   5
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   [],
+   [],
+   [],
+   [],
+   []
+  ],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "aadf4ad73f54f2ba77bfc1f7372fe26f12b2e295de97b7a7276de5e6557552cf",
+  "epsilon_max": null,
+  "epsilon_per_node": null
+ },
+ "robust_dp_equivocate": {
+  "rounds": 3,
+  "failed_rounds": [],
+  "round_seconds_median": 0.194,
+  "ticks_median": 10,
+  "crdt_converged_tick_median": 9,
+  "gossip_sends_per_round_median": 176,
+  "duplicates_per_round_median": 44,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.806,
+  "gate_passed": [
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "AT"
+   ],
+   [
+    "DE"
+   ],
+   [
+    "AT"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 0,
+    "admitted": 3
+   },
+   "DE": {
+    "selected": 1,
+    "admitted": 3
+   },
+   "FR": {
+    "selected": 0,
+    "admitted": 3
+   },
+   "AT": {
+    "selected": 2,
+    "admitted": 3
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 0
+   }
+  },
+  "quorum_signers": [
+   4,
+   3,
+   4
+  ],
+  "quorum_Q": [
+   4,
+   3,
+   3
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   []
+  ],
+  "quarantined": [
+   "IT"
+  ],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "52096ca881d5a617ed1ca1667416e90cf1d8bd47752f6c6b03b123429f9d77e9",
+  "epsilon_max": 1.4916,
+  "epsilon_per_node": {
+   "CH": 1.0043,
+   "DE": 1.0043,
+   "FR": 1.0043,
+   "AT": 1.4916,
+   "IT": 0.7101
+  }
+ },
+ "blind_dp_equivocate": {
+  "rounds": 3,
+  "failed_rounds": [],
+  "round_seconds_median": 0.219,
+  "ticks_median": 11,
+  "crdt_converged_tick_median": 6,
+  "gossip_sends_per_round_median": 192,
+  "duplicates_per_round_median": 44,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8253,
+  "gate_passed": [
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "CH",
+    "DE",
+    "AT",
+    "FR"
+   ],
+   [
+    "DE",
+    "AT",
+    "FR",
+    "CH"
+   ],
+   [
+    "FR",
+    "DE",
+    "AT",
+    "CH"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "DE": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "FR": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "AT": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 0
+   }
+  },
+  "quorum_signers": [
+   3,
+   4,
+   3
+  ],
+  "quorum_Q": [
+   3,
+   3,
+   3
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   []
+  ],
+  "quarantined": [
+   "IT"
+  ],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "e313459e545f1fc7c6977b26b06ba0065e34c819e68d55e7f2cbf97b3a3b41b9",
+  "epsilon_max": 1.4916,
+  "epsilon_per_node": {
+   "CH": 1.0043,
+   "DE": 1.0043,
+   "FR": 1.0043,
+   "AT": 1.4916,
+   "IT": 0.7101
+  }
+ },
+ "robust_dp_divergent-root": {
+  "rounds": 3,
+  "failed_rounds": [],
+  "round_seconds_median": 0.262,
+  "ticks_median": 11,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 192,
+  "duplicates_per_round_median": 31,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8107,
+  "gate_passed": [
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "AT",
+    "DE"
+   ],
+   [
+    "IT",
+    "DE"
+   ],
+   [
+    "AT"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 0,
+    "admitted": 3
+   },
+   "DE": {
+    "selected": 2,
+    "admitted": 3
+   },
+   "FR": {
+    "selected": 0,
+    "admitted": 3
+   },
+   "AT": {
+    "selected": 2,
+    "admitted": 3
+   },
+   "IT": {
+    "selected": 1,
+    "admitted": 2
+   }
+  },
+  "quorum_signers": [
+   4,
+   4,
+   3
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   3
+  ],
+  "divergent_signers": [
+   [
+    "IT"
+   ],
+   [
+    "IT"
+   ],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   []
+  ],
+  "quarantined": [
+   "IT"
+  ],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "6275b7bc78e81e3b54b41f384b8118a351d41df4bd079786574c8e62a506a5e7",
+  "epsilon_max": 1.4916,
+  "epsilon_per_node": {
+   "CH": 1.0043,
+   "DE": 1.0043,
+   "FR": 1.0043,
+   "AT": 1.4916,
+   "IT": 0.9413
+  }
+ },
+ "blind_dp_divergent-root": {
+  "rounds": 3,
+  "failed_rounds": [],
+  "round_seconds_median": 0.256,
+  "ticks_median": 11,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 192,
+  "duplicates_per_round_median": 31,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.824,
+  "gate_passed": [
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "AT",
+    "FR",
+    "DE",
+    "IT",
+    "CH"
+   ],
+   [
+    "IT",
+    "CH",
+    "FR",
+    "DE",
+    "AT"
+   ],
+   [
+    "AT",
+    "FR",
+    "CH",
+    "DE"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "DE": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "FR": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "AT": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "IT": {
+    "selected": 2,
+    "admitted": 2
+   }
+  },
+  "quorum_signers": [
+   4,
+   4,
+   3
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   3
+  ],
+  "divergent_signers": [
+   [
+    "IT"
+   ],
+   [
+    "IT"
+   ],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   []
+  ],
+  "quarantined": [
+   "IT"
+  ],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "995ad05370ec49d59e3c3f355d56aaed13ea8d0db70fb3d4e788773ac8049458",
+  "epsilon_max": 1.4916,
+  "epsilon_per_node": {
+   "CH": 1.0043,
+   "DE": 1.0043,
+   "FR": 1.0043,
+   "AT": 1.4916,
+   "IT": 0.9413
+  }
+ },
+ "robust_dp_forged-signature": {
+  "rounds": 3,
+  "failed_rounds": [],
+  "round_seconds_median": 0.198,
+  "ticks_median": 11,
+  "crdt_converged_tick_median": 6,
+  "gossip_sends_per_round_median": 196,
+  "duplicates_per_round_median": 37,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8213,
+  "gate_passed": [
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "DE"
+   ],
+   [
+    "FR"
+   ],
+   [
+    "FR"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 0,
+    "admitted": 3
+   },
+   "DE": {
+    "selected": 1,
+    "admitted": 3
+   },
+   "FR": {
+    "selected": 2,
+    "admitted": 3
+   },
+   "AT": {
+    "selected": 0,
+    "admitted": 3
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 0
+   }
+  },
+  "quorum_signers": [
+   5,
+   4,
+   4
+  ],
+  "quorum_Q": [
+   4,
+   3,
+   3
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   []
+  ],
+  "quarantined": [
+   "IT"
+  ],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "accb5b805318879d3511ca15c95740f1a8eae547077ed781de9e09c5c4bdc108",
+  "epsilon_max": 1.4916,
+  "epsilon_per_node": {
+   "CH": 1.0043,
+   "DE": 1.0043,
+   "FR": 1.0043,
+   "AT": 1.4916,
+   "IT": 0.7101
+  }
+ },
+ "blind_dp_forged-signature": {
+  "rounds": 3,
+  "failed_rounds": [],
+  "round_seconds_median": 0.23,
+  "ticks_median": 11,
+  "crdt_converged_tick_median": 6,
+  "gossip_sends_per_round_median": 188,
+  "duplicates_per_round_median": 39,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8253,
+  "gate_passed": [
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "FR",
+    "DE",
+    "AT",
+    "CH"
+   ],
+   [
+    "CH",
+    "DE",
+    "FR",
+    "AT"
+   ],
+   [
+    "FR",
+    "AT",
+    "DE",
+    "CH"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "DE": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "FR": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "AT": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 0
+   }
+  },
+  "quorum_signers": [
+   4,
+   3,
+   4
+  ],
+  "quorum_Q": [
+   3,
+   3,
+   3
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   []
+  ],
+  "quarantined": [
+   "IT"
+  ],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "e313459e545f1fc7c6977b26b06ba0065e34c819e68d55e7f2cbf97b3a3b41b9",
+  "epsilon_max": 1.4916,
+  "epsilon_per_node": {
+   "CH": 1.0043,
+   "DE": 1.0043,
+   "FR": 1.0043,
+   "AT": 1.4916,
+   "IT": 0.7101
+  }
+ },
+ "robust_dp_sign-flip-in-bound": {
+  "rounds": 3,
+  "failed_rounds": [],
+  "round_seconds_median": 0.234,
+  "ticks_median": 11,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 192,
+  "duplicates_per_round_median": 39,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8173,
+  "gate_passed": [
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "DE",
+    "AT"
+   ],
+   [
+    "FR",
+    "DE"
+   ],
+   [
+    "AT",
+    "DE"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 0,
+    "admitted": 3
+   },
+   "DE": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "FR": {
+    "selected": 1,
+    "admitted": 3
+   },
+   "AT": {
+    "selected": 2,
+    "admitted": 3
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 3
+   }
+  },
+  "quorum_signers": [
+   5,
+   5,
+   4
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   4
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   []
+  ],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "bbe104dd97f0c2e05414430a96d65787308237caa7acb5d14a794f0d992cf7c4",
+  "epsilon_max": 1.4916,
+  "epsilon_per_node": {
+   "CH": 1.0043,
+   "DE": 1.0043,
+   "FR": 1.0043,
+   "AT": 1.4916,
+   "IT": 1.1264
+  }
+ },
+ "blind_dp_sign-flip-in-bound": {
+  "rounds": 3,
+  "failed_rounds": [],
+  "round_seconds_median": 0.248,
+  "ticks_median": 11,
+  "crdt_converged_tick_median": 7,
+  "gossip_sends_per_round_median": 192,
+  "duplicates_per_round_median": 39,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.782,
+  "gate_passed": [
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "IT",
+    "AT",
+    "FR",
+    "CH",
+    "DE"
+   ],
+   [
+    "DE",
+    "FR",
+    "IT",
+    "CH",
+    "AT"
+   ],
+   [
+    "FR",
+    "IT",
+    "AT",
+    "DE",
+    "CH"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "DE": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "FR": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "AT": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "IT": {
+    "selected": 3,
+    "admitted": 3
+   }
+  },
+  "quorum_signers": [
+   5,
+   5,
+   4
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   4
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   []
+  ],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "5199f41ad19642e18d5324521f89bca13a10e8eecd8071d40954c86969aee199",
+  "epsilon_max": 1.4916,
+  "epsilon_per_node": {
+   "CH": 1.0043,
+   "DE": 1.0043,
+   "FR": 1.0043,
+   "AT": 1.4916,
+   "IT": 1.1264
+  }
+ },
+ "partition_heals": {
+  "rounds": 2,
+  "failed_rounds": [],
+  "round_seconds_median": 0.232,
+  "ticks_median": 19.0,
+  "crdt_converged_tick_median": 16.0,
+  "gossip_sends_per_round_median": 188.0,
+  "duplicates_per_round_median": 42.0,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.7993,
+  "gate_passed": [
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "DE",
+    "AT"
+   ],
+   [
+    "DE",
+    "IT"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 0,
+    "admitted": 2
+   },
+   "DE": {
+    "selected": 2,
+    "admitted": 2
+   },
+   "FR": {
+    "selected": 0,
+    "admitted": 2
+   },
+   "AT": {
+    "selected": 1,
+    "admitted": 2
+   },
+   "IT": {
+    "selected": 1,
+    "admitted": 2
+   }
+  },
+  "quorum_signers": [
+   5,
+   4
+  ],
+  "quorum_Q": [
+   4,
+   4
+  ],
+  "divergent_signers": [
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   []
+  ],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "f112d1f55b2dfd16104962f4ce93521d91eca7b9440ee33982c0362468831762",
+  "epsilon_max": 1.254,
+  "epsilon_per_node": {
+   "CH": 0.8365,
+   "DE": 0.8365,
+   "FR": 0.8365,
+   "AT": 1.254,
+   "IT": 0.9413
+  }
+ },
+ "partition_never_heals": {
+  "rounds": 1,
+  "failed_rounds": [
+   1
+  ],
+  "round_seconds_median": 0.092,
+  "ticks_median": null,
+  "crdt_converged_tick_median": null,
+  "gossip_sends_per_round_median": null,
+  "duplicates_per_round_median": null,
+  "acc_common_before": null,
+  "acc_common_after": null,
+  "gate_passed": [
+   false
+  ],
+  "gate_failures": {
+   "1": []
+  },
+  "selected": [],
+  "selection_counts": {
+   "CH": {
+    "selected": 0,
+    "admitted": 0
+   },
+   "DE": {
+    "selected": 0,
+    "admitted": 0
+   },
+   "FR": {
+    "selected": 0,
+    "admitted": 0
+   },
+   "AT": {
+    "selected": 0,
+    "admitted": 0
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 0
+   }
+  },
+  "quorum_signers": [],
+  "quorum_Q": [],
+  "divergent_signers": [],
+  "dispute_violators": [],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [],
+  "final_model_sha256": null,
+  "epsilon_max": 0.9593,
+  "epsilon_per_node": {
+   "CH": 0.6288,
+   "DE": 0.6288,
+   "FR": 0.6288,
+   "AT": 0.9593,
+   "IT": 0.7101
+  }
+ },
+ "heavy_duplication_delay": {
+  "rounds": 3,
+  "failed_rounds": [],
+  "round_seconds_median": 0.269,
+  "ticks_median": 16,
+  "crdt_converged_tick_median": 15,
+  "gossip_sends_per_round_median": 216,
+  "duplicates_per_round_median": 122,
+  "acc_common_before": 0.486,
+  "acc_common_after": 0.8173,
+  "gate_passed": [
+   true,
+   true,
+   true
+  ],
+  "gate_failures": {},
+  "selected": [
+   [
+    "AT",
+    "DE"
+   ],
+   [
+    "DE",
+    "FR"
+   ],
+   [
+    "AT",
+    "DE"
+   ]
+  ],
+  "selection_counts": {
+   "CH": {
+    "selected": 0,
+    "admitted": 3
+   },
+   "DE": {
+    "selected": 3,
+    "admitted": 3
+   },
+   "FR": {
+    "selected": 1,
+    "admitted": 3
+   },
+   "AT": {
+    "selected": 2,
+    "admitted": 3
+   },
+   "IT": {
+    "selected": 0,
+    "admitted": 3
+   }
+  },
+  "quorum_signers": [
+   5,
+   5,
+   5
+  ],
+  "quorum_Q": [
+   4,
+   4,
+   4
+  ],
+  "divergent_signers": [
+   [],
+   [],
+   []
+  ],
+  "dispute_violators": [
+   [],
+   [],
+   []
+  ],
+  "quarantined": [],
+  "identical_state_roots_all_rounds": true,
+  "identical_receipts_all_rounds": true,
+  "identical_installed_hash_all_rounds": true,
+  "verify_exit_codes": [
+   0
+  ],
+  "final_model_sha256": "bbe104dd97f0c2e05414430a96d65787308237caa7acb5d14a794f0d992cf7c4",
+  "epsilon_max": 1.4916,
+  "epsilon_per_node": {
+   "CH": 1.0043,
+   "DE": 1.0043,
+   "FR": 1.0043,
+   "AT": 1.4916,
+   "IT": 1.1264
+  }
+ },
+ "privacy_attacks_seconds": 3.62,
+ "mia": {
+  "robust_nodp": {
+   "shared": 0.5034,
+   "update": 0.4645
+  },
+  "blind_nodp": {
+   "shared": 0.5038,
+   "update": 0.4748
+  },
+  "robust_dp": {
+   "shared": 0.5008,
+   "update": 0.4929
+  },
+  "blind_dp": {
+   "shared": 0.501,
+   "update": 0.4923
+  }
+ },
+ "mia_worst_case": {
+  "clear": 0.8271,
+  "dp": 0.6655,
+  "masked": 0.4936
+ },
+ "mia_theoretical_max_advantage": 0.6326,
+ "accuracy_attack_federations": {
+  "robust_nodp": 0.8313,
+  "blind_nodp": 0.834,
+  "robust_dp": 0.8173,
+  "blind_dp": 0.8253
+ },
+ "inversion": {
+  "worst_case_single_record_clear": {
+   "success": true,
+   "rmse_nearest": 0.0
+  },
+  "worst_case_single_record_dp": {
+   "success": false,
+   "rmse_nearest": 0.5386
+  },
+  "worst_case_single_record_masked": {
+   "success": false,
+   "rmse_nearest": 0.5446
+  },
+  "intercepted_round1_update": {
+   "success": false,
+   "rmse_nearest": 0.4285
+  },
+  "intercepted_round1_update_robust_nodp": {
+   "success": false,
+   "rmse_nearest": 0.5331
+  },
+  "intercepted_round1_update_blind_nodp": {
+   "success": false,
+   "rmse_nearest": 0.5484
+  }
+ },
+ "exposure": {
+  "robust_nodp": {
+   "mean": 1.733,
+   "max": 7.382
+  },
+  "blind_nodp": {
+   "mean": 1.726,
+   "max": 7.967
+  },
+  "robust_dp": {
+   "mean": 1.661,
+   "max": 7.645
+  },
+  "blind_dp": {
+   "mean": 1.722,
+   "max": 7.967
+  }
+ },
+ "tamper": {
+  "receipt_byte": true,
+  "model_swap": true,
+  "wrong_key": true
+ },
+ "leaky_node": {
+  "blocked": [
+   "AT"
+  ],
+  "scan_hits": 224,
+  "delivered_hits": 0,
+  "raw_data_received_by_any_peer": false,
+  "round_failed": null
+ },
+ "budget_halt": {
+  "rounds_run": 13,
+  "halted": {
+   "round": 14,
+   "reason": "privacy budget would be exceeded",
+   "projected": {
+    "AT": 3.116
+   },
+   "cap": 3.0
+  }
+ }
+}

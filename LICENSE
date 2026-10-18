@@ -1,0 +1,67 @@
+Business Source License 1.1
+
+License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
+"Business Source License" is a trademark of MariaDB Corporation Ab.
+
+Parameters
+
+Licensor: Ryan Gillespie / Optitransfer
+Contact: rgillespie83@icloud.com | data@optitransfer.ch
+
+Licensed Work: sovereign-hospital-federation
+The Licensed Work is (c) 2026 Ryan Gillespie / Optitransfer.
+
+Additional Use Grant:
+
+You may use, modify, copy and distribute the Licensed Work, free of charge, for:
+
+- research and academic work, including benchmarking and publications;
+- education and teaching;
+- evaluation, testing and demonstration of the Licensed Work; and
+- non-commercial pilots (a time-limited trial that is not used to serve
+  production workloads and from which no revenue is derived).
+
+Any other use requires a commercial license from the Licensor, in particular:
+
+- production or commercial use of the Licensed Work or a derivative of it; and
+- offering the Licensed Work (or a substantially similar derivative) to third
+  parties as a hosted, managed or as-a-service offering.
+
+Change Date: 2030-10-18
+
+Change License: Apache License, Version 2.0
+
+On the Change Date (or the fourth anniversary of the first public distribution
+of this version, whichever comes first), the Licensed Work automatically converts
+to the Apache 2.0 License with no additional restrictions.
+
+Third-party components keep their own licenses; see NOTICE.
+
+Terms
+
+The Licensor hereby grants you the right to copy, modify, create derivative
+works, redistribute, and make non-production use of the Licensed Work. The
+Licensor may make an Additional Use Grant, above, permitting limited production
+use.
+
+Effective on the Change Date, or the fourth anniversary of the first publicly
+available distribution of a specific version of the Licensed Work under this
+License, whichever comes first, the Licensor hereby grants you rights under
+the terms of the Change License, and the rights granted in the paragraph
+above terminate.
+
+If your use of the Licensed Work does not comply with the requirements
+currently in effect as described in this License, you must purchase a
+commercial license from the Licensor or refrain from using the Licensed Work.
+
+This License applies separately for each version of the Licensed Work and the
+Change Date may vary for each version.
+
+You must conspicuously display this License on each original or modified copy
+of the Licensed Work.
+
+TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED WORK IS PROVIDED ON
+AN "AS IS" BASIS. LICENSOR HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS,
+EXPRESS OR IMPLIED, INCLUDING (WITHOUT LIMITATION) WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND
+TITLE.

@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: BUSL-1.1
+# Copyright 2026 Ryan Gillespie / Optitransfer
+name = "proofs"
+defaultTargets = ["Proofs"]
+
+[[lean_lib]]
+name = "Proofs"

@@ -1,0 +1,65 @@
+sovereign-hospital-federation
+Copyright 2026 Ryan Gillespie / Optitransfer
+
+This product is licensed under the Business Source License 1.1 (see LICENSE),
+with an Additional Use Grant limited to research, education, evaluation and
+non-commercial pilots. Production, commercial, hosted or managed-service use
+requires a commercial licence: rgillespie83@icloud.com | data@optitransfer.ch.
+
+Note: this grant is NARROWER than the grant of the crdt-merge dependency
+(which permits production use other than a competing merge service). Each
+component keeps its own licence; the narrower grant applies only to the code in
+this repository.
+
+It uses the following components, which keep their own licences. None of their
+source code is copied or vendored into this repository.
+
+------------------------------------------------------------------------------
+ACFA (acfa-rs) -- Apache License, Version 2.0
+------------------------------------------------------------------------------
+  https://github.com/mgillr/acfa-rs @ d19fb56b043ddad3ac0448ed9ceede51ba6c2c47
+  Copyright 2026 Ryan Gillespie
+  Used UNMODIFIED as a pinned dependency: the `acfa-receipt` and
+  `acfa-aggregate` crates (linked into bridge/acfa-bridge) and the upstream
+  `acfa-verify` binary, built from source at that revision.
+
+  acfa-rs NOTICE reproduces BSD-3-Clause notices for binary redistribution:
+    ed25519-dalek      Copyright (c) 2017-2019 isis agora lovecruft.
+    curve25519-dalek   Copyright (c) 2016-2021 isis agora lovecruft;
+                       Copyright (c) 2016-2021 Henry de Valence.
+    subtle             Copyright (c) 2016-2017 Isis Agora Lovecruft, Henry de Valence;
+                       Copyright (c) 2016-2024 Isis Agora Lovecruft.
+  Redistributions in binary form must reproduce the above copyright notices,
+  the BSD 3-Clause conditions and disclaimer (full text: acfa-rs/NOTICE).
+
+------------------------------------------------------------------------------
+crdt-merge 0.11.0 -- Business Source License 1.1
+------------------------------------------------------------------------------
+  https://github.com/mgillr/crdt-merge  (PyPI: crdt-merge==0.11.0)
+  Copyright 2026 Ryan Gillespie / Optitransfer
+  Installed from PyPI as a dependency; not vendored or modified. Used through
+  its public API only:
+    - crdt_merge.model.crdt_state.CRDTMergeState (gossip set and state hash);
+    - crdt_merge.e4.typed_trust.TypedTrustScore and its public constants
+      (peer trust evidence and quarantine). This is crdt-merge's E4 trust
+      feature, used as published.
+  crdt-merge's own LICENSE, NOTICE and PATENTS files govern that package,
+  including its patent notices (see PATENTS in this repository).
+
+------------------------------------------------------------------------------
+Python dependencies (installed, not vendored)
+------------------------------------------------------------------------------
+  numpy (BSD-3-Clause), cryptography (Apache-2.0 OR BSD-3-Clause),
+  gradio (Apache-2.0), plotly (MIT), opacus (Apache-2.0; tests only).
+
+------------------------------------------------------------------------------
+Build tools (not redistributed in source form)
+------------------------------------------------------------------------------
+  Lean 4 and elan (Apache-2.0), used to check proofs/; Rust toolchain
+  (MIT OR Apache-2.0); @mermaid-js/mermaid-cli (MIT), used offline to render
+  docs/diagrams.
+
+"Business Source License" is a trademark of MariaDB Corporation Ab.
+
+The reference to arXiv:2607.10305 (Gillespie, "Byzantine Accountability Without
+Consensus") is a citation; no text from the paper is reproduced.

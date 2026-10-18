@@ -1,0 +1,34 @@
+%% SPDX-License-Identifier: BUSL-1.1
+%% Which machine-checked theorem (proofs/) backs which runtime claim (fed/).
+flowchart LR
+  subgraph Lean["proofs/ (Lean 4, 0 sorry, 0 axioms declared)"]
+    C1["Crdt.same_set_same_state, reorder_invariant, duplicate_invariant, merge_replicas"]
+    C2["Crdt.join_comm, join_assoc, join_idem"]
+    Q1["Quorum.intersection, unique_root"]
+    Q2["Quorum.demo_quorum_ok, demo_quorum_live"]
+    S1["SecAgg.masks_cancel, masked_sum_eq_plain_sum, masked_floor_mean_eq"]
+    D1["Determinism.order_independent_sum, order_independent_floor_mean"]
+    G1["Gate.gate_accept_no_regression, reject_keeps_model, gate_deterministic"]
+    B1["Budget.budget_halt_safe, halt_is_permanent, run_mono"]
+    K1["Clip.clip_vec_bound, masked_clip_range"]
+  end
+  subgraph Code["runtime claim (fed/, tests/)"]
+    R1["gossip under shuffle, duplicates, delay and healed partitions gives identical state hashes"]
+    R2["at most one root can gather a quorum of co-signatures"]
+    R3["Q = 4 of 5 tolerates one Byzantine peer and stays live"]
+    R4["each node's sum of the masked set equals the sum of the hidden updates"]
+    R5["every node computes the same aggregate whatever the arrival order"]
+    R6["an installed model never regresses a site by more than tol"]
+    R7["epsilon never exceeds the cap, halt is permanent"]
+    R8["masked Q16.16 values stay in range"]
+  end
+  C1 --> R1
+  C2 --> R1
+  Q1 --> R2
+  Q2 --> R3
+  S1 --> R4
+  D1 --> R5
+  C1 --> R5
+  G1 --> R6
+  B1 --> R7
+  K1 --> R8

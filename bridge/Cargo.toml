@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: BUSL-1.1
+# Copyright 2026 Ryan Gillespie / Optitransfer
+[package]
+name = "acfa-bridge"
+version = "0.1.0"
+edition = "2021"
+description = "JSON bridge between the demo's Python nodes and acfa-rs (pinned at d19fb56). Signs, issues and resolves; never re-implements the kernel."
+publish = false
+license = "BUSL-1.1"
+
+[dependencies]
+acfa-receipt = { git = "https://github.com/mgillr/acfa-rs", rev = "d19fb56b043ddad3ac0448ed9ceede51ba6c2c47" }
+acfa-aggregate = { git = "https://github.com/mgillr/acfa-rs", rev = "d19fb56b043ddad3ac0448ed9ceede51ba6c2c47" }
+serde_json = "1"
+
+[profile.release]
+overflow-checks = true

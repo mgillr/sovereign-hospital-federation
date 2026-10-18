@@ -1,0 +1,14 @@
+.bin/
+bridge/target/
+proofs/.lake/
+__pycache__/
+.pytest_cache/
+*.pyc
+runs/
+*.zip
+**/keys/
+*.secret
+*.key
+.env
+*.env
+.puppeteer.json

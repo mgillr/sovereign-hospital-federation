@@ -1,0 +1,6 @@
+.bin
+bridge/target
+proofs/.lake
+__pycache__
+.pytest_cache
+.git

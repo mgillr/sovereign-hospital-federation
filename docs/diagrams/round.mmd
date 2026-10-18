@@ -1,0 +1,32 @@
+%% SPDX-License-Identifier: BUSL-1.1
+%% One round in the leaderless mesh. Every peer runs every step itself; no step has a leader.
+sequenceDiagram
+  autonumber
+  participant A as Hospital A (any peer)
+  participant P as Every other peer
+  Note over A,P: round r: same manifest derived on every node from the installed model hash (ctx)
+  A->>A: train locally (DP-SGD), clip, quantise Q16.16, sign (ACFA-CONTRIB2)
+  opt blind mode
+    A->>A: add pairwise X25519 masks, commit to the clear update
+  end
+  A->>P: gossip delta of the CRDT set (random order, delay, duplicates, partitions)
+  P->>A: gossip their deltas
+  Note over A,P: CRDT union is commutative, associative, idempotent: same set means same state hash
+  A->>A: close when all participants are in, or at least Q after the deadline
+  A->>A: ACFA locally (multi-Krum in robust mode, exact sum of masked set in blind mode), issue receipt
+  A->>P: gossip co-signature over (state root, output root, receipt hash, candidate hash, leaves)
+  P->>A: gossip their co-signatures
+  alt Q matching co-signatures (2Q > n+f)
+    A->>A: accept the quorum root, recompute if it closed on a partial set
+  else equivocation, lying root or invalid signature
+    A->>A: record evidence in TypedTrustScore (public API), quarantine at 0.1 or below
+  else no quorum (unhealed partition, more than f faults)
+    A->>A: re-close, then fail safe: nothing installed
+  end
+  opt blind mode: aggregate norm above S or gate failure
+    A->>P: gossip opening of own commitment (peer-to-peer dispute)
+    P->>A: openings, every node checks and excludes the violator, re-mask
+  end
+  A->>P: gossip signed eval report (before/after accuracy on own test set)
+  A->>A: regression gate on all reports, acfa-verify own receipt
+  A->>A: install only if gate passes AND acfa-verify exits 0

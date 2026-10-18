@@ -1,0 +1,22 @@
+Patent notice -- sovereign-hospital-federation
+
+1. This repository makes no patent claims of its own and grants no patent
+   licence of its own.
+
+2. It depends on crdt-merge (PyPI crdt-merge==0.11.0), installed as an
+   unmodified dependency. crdt-merge's own PATENTS and NOTICE files state that
+   parts of crdt-merge are the subject of the following UK patent
+   APPLICATIONS (pending, not granted patents):
+
+     - UK Patent Application No. 2607132.4
+     - UK Patent Application No. GB2608127.3 (crdt-merge's NOTICE associates
+       this application with its E4 trust feature)
+
+   Any patent licence for those applications is the one granted in
+   crdt-merge's own PATENTS file, subject to crdt-merge's Business Source
+   License 1.1. This notice only mirrors that information for users of this
+   repository; it does not extend, narrow or replace crdt-merge's terms. If
+   this notice and crdt-merge's files differ, crdt-merge's files govern.
+
+3. acfa-rs (Apache-2.0) carries the patent grant in section 3 of the Apache
+   License, Version 2.0, for that component.

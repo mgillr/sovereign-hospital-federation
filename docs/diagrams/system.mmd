@@ -1,0 +1,31 @@
+%% SPDX-License-Identifier: BUSL-1.1
+%% Leaderless system view: five peers, full mesh, no server. Every hospital runs the same stack.
+flowchart LR
+  subgraph CH["CH hospital (nFADP)"]
+    CHd[(patient records, never leave)] --> CHt[local DP-SGD training]
+    CHt --> CHs[sign contribution]
+    CHs --> CHc[(CRDT grow-only set, crdt-merge)]
+    CHc --> CHa[ACFA aggregate locally, acfa-rs]
+    CHa --> CHq[co-sign state root]
+    CHq --> CHc
+    CHc --> CHg[quorum check + regression gate]
+    CHg --> CHm[install model]
+    CHx[DLP egress gateway, per-link log + canary scan]
+  end
+  DE["DE hospital (GDPR), same stack"]
+  FR["FR hospital (GDPR), same stack"]
+  AT["AT hospital (GDPR), same stack"]
+  IT["IT hospital (GDPR), same stack, adversary toggle"]
+  CHc <-.-> CHx
+  CHx <-->|"gossip: signed envelopes"| DE
+  CHx <-->|gossip| FR
+  CHx <-->|gossip| AT
+  CHx <-->|gossip| IT
+  DE <-->|gossip| FR
+  DE <-->|gossip| AT
+  DE <-->|gossip| IT
+  FR <-->|gossip| AT
+  FR <-->|gossip| IT
+  AT <-->|gossip| IT
+  V["offline verifier, anyone: verify_bundle.py + acfa-verify (not a network participant)"]
+  CHm -. evidence bundle .-> V

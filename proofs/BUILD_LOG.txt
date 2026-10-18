@@ -1,0 +1,49 @@
+toolchain: leanprover/lean4:v4.35.0  (Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release))
+Build completed successfully (11 jobs).
+'Basics.sum_perm' depends on axioms: [propext, Quot.sound]
+'Basics.sum_append_eq' depends on axioms: [propext, Quot.sound]
+'Basics.withinTol_bound' does not depend on any axioms
+'Basics.clamp_range' depends on axioms: [propext, Quot.sound]
+'Basics.clamp_id' depends on axioms: [propext]
+'Budget.step_mono' depends on axioms: [propext, Quot.sound]
+'Budget.step_le_cap' does not depend on any axioms
+'Budget.run_mono' depends on axioms: [propext, Quot.sound]
+'Budget.budget_halt_safe' does not depend on any axioms
+'Budget.halt_is_permanent' depends on axioms: [propext]
+'Budget.total_append_mono' depends on axioms: [propext, Quot.sound]
+'Clip.clip_vec_bound' depends on axioms: [propext, Quot.sound]
+'Clip.masked_clip_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Crdt.join_comm' depends on axioms: [propext, Quot.sound]
+'Crdt.join_assoc' depends on axioms: [propext, Quot.sound]
+'Crdt.join_idem' depends on axioms: [propext, Quot.sound]
+'Crdt.join_empty' depends on axioms: [propext, Quot.sound]
+'Crdt.deliver_mem' depends on axioms: [propext]
+'Crdt.same_set_same_state' depends on axioms: [propext, Quot.sound]
+'Crdt.reorder_invariant' depends on axioms: [propext, Quot.sound]
+'Crdt.duplicate_invariant' depends on axioms: [propext, Quot.sound]
+'Crdt.deliver_append' depends on axioms: [propext, Quot.sound]
+'Crdt.merge_replicas' depends on axioms: [propext, Quot.sound]
+'Determinism.order_independent_sum' depends on axioms: [propext, Quot.sound]
+'Determinism.order_independent_floor_mean' depends on axioms: [propext, Quot.sound]
+'Gate.gate_accept_no_regression' does not depend on any axioms
+'Gate.reject_keeps_model' does not depend on any axioms
+'Gate.installed_within_tol' does not depend on any axioms
+'Gate.gate_deterministic' does not depend on any axioms
+'Quorum.cnt_le' depends on axioms: [propext, Quot.sound]
+'Quorum.cnt_or_and' depends on axioms: [propext, Quot.sound]
+'Quorum.cnt_split' depends on axioms: [propext, Quot.sound]
+'Quorum.exists_of_cnt_pos' depends on axioms: [propext]
+'Quorum.intersection' depends on axioms: [propext, Quot.sound]
+'Quorum.unique_root' depends on axioms: [propext, Quot.sound]
+'Quorum.demo_quorum_ok' depends on axioms: [propext, Quot.sound]
+'Quorum.demo_quorum_live' depends on axioms: [propext, Quot.sound]
+'SecAgg.sumTo_add' depends on axioms: [propext, Quot.sound]
+'SecAgg.sumTo_neg' depends on axioms: [propext, Quot.sound]
+'SecAgg.sumTo_congr' does not depend on any axioms
+'SecAgg.antisym_dsum_zero' depends on axioms: [propext, Quot.sound]
+'SecAgg.term_antisym' depends on axioms: [propext]
+'SecAgg.masks_cancel' depends on axioms: [propext, Quot.sound]
+'SecAgg.masked_sum_eq_plain_sum' depends on axioms: [propext, Quot.sound]
+'SecAgg.masked_floor_mean_eq' depends on axioms: [propext, Quot.sound]
+'SecAgg.masked_sum_mod' depends on axioms: [propext, Quot.sound]
+PROOFS: PASS (46 theorems, each checked with #print axioms; 0 sorry, 0 axioms declared)

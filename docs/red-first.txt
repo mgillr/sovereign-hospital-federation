@@ -1,0 +1,42 @@
+Red-first record (tests written before the code they test).
+
+1. tests/test_demo.py (the core suite) was written before fed/ was implemented, and the code was written to
+   make it pass. Its original failing output was not preserved; this file records only what was logged.
+2. tests/test_gold.py (secure aggregation, budget halt, attacks, verify_bundle, Lean) was written before the
+   bundle builder, verify_bundle.py, the leaky-node and dropout fixes and the regime labels were finished.
+   First run on 2026-10-18: 5 failed, 43 passed.
+     FAILED test_demo.py::test_leaky_node_is_caught_and_blocked            KeyError: 4  (leaky node's key exchange blocked)
+     FAILED test_demo.py::test_dp_membership_inference_near_chance         assumption wrong: no-DP MIA is already at chance
+     FAILED test_gold.py::test_leaky_node_bundle_withholds_blocked_bytes   KeyError
+     FAILED test_gold.py::test_pairwise_masks_cancel_exactly               test used the wrong API
+     FAILED test_gold.py::test_blind_dropout_is_handled_by_remasking       KeyError: 4
+   Fixes:
+     - the leaky node's bug now affects only update messages;
+     - the MIA target falls back to an unblocked node;
+     - the MIA test was corrected to an honest assertion (no-DP is at chance at this scale; causality is shown
+       by the worst-case test);
+     - the test now uses the real secagg API.
+3. Coordinator-era final: 48 passed.
+4. Leaderless redesign. fed/federation.py was rewritten as a peer-to-peer mesh first (an earlier draft
+   existed), so tests/test_mesh.py is NOT strictly red-first for every test; this is what it caught.
+   First run of tests/test_mesh.py: 4 failed, 16 passed.
+     FAILED test_no_coordinator_anywhere_in_code_or_ui                  app.py and fed/secagg.py still described a coordinator
+     FAILED test_divergent_root_node_is_flagged_and_quorum_still_reached  KeyError 'site' (event schema)
+     FAILED test_blind_mode_every_node_sums_the_masked_set_itself         summed_by was a string, not the list of nodes
+     FAILED test_selection_counts_are_reported_per_site                   test too strict (3 rounds can skip an honest site)
+   First full-suite run after porting test_demo.py/test_gold.py: 3 failed, 66 passed.
+     FAILED test_blind_out_of_bound_attacker_found_by_dispute_and_excluded  after round 1 the attacker is quarantined,
+                                                                           so later rounds have no dispute (test updated)
+     FAILED test_verify_bundle_detects_tampering[cosig_edit]              one edited co-signature still left a quorum;
+                                                                           verify_bundle.py now also checks EVERY
+                                                                           published co-signature
+     FAILED test_no_coordinator_anywhere_in_code_or_ui                    (app.py rewrite pending)
+   Found while measuring (then guarded by new tests):
+     - forged-signature rounds: every node's expected state root included the forged contribution, so
+       acfa-verify exited 1 and nothing was installed while the UI still showed the candidate hash. Nodes now
+       check contribution signatures themselves; installed_hashes reports the model actually installed
+       (test_every_honest_node_verifies_its_own_receipt_before_installing).
+     - honest nodes that closed early on a partial set were counted as "divergent" and lost trust. Co-signatures
+       are now classified stale (root follows from the declared leaves) or divergent (it does not); only
+       divergent ones are evidence (test_a_stale_close_is_not_punished_but_a_lying_root_is).
+     - an equivocator was also charged with an invalid signature; fixed.
