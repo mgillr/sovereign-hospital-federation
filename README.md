@@ -1,10 +1,15 @@
-# Sovereign Hospital Federation
+# Sovereign Hospital Federation: leaderless, coordinator-free federated learning for hospitals
 
-**Five hospitals in five jurisdictions train one model with no central server. No patient record leaves its hospital, every hospital aggregates and verifies the round itself, and every round leaves evidence that anyone can check offline.**
+**Decentralized federated learning across hospitals with no central server.** Five hospitals in five jurisdictions (Switzerland and four EU countries) train one clinical model peer-to-peer. Patient data never leaves its hospital, which supports **data sovereignty** under GDPR and the Swiss nFADP. Each hospital adds **differential privacy** (DP-SGD) and can use **secure aggregation**. Every hospital aggregates the round itself with **verifiable receipts**, and a model is installed only when a quorum of hospitals has co-signed the same result. Gossip convergence and quorum safety are **proved in Lean 4**, and every round leaves an evidence bundle that anyone can check offline.
 
-[![Hugging Face Space](https://img.shields.io/badge/%F0%9F%A4%97%20Space-sovereign--hospital--federation-blue)](https://huggingface.co/spaces/Optitransfer/sovereign-hospital-federation)
-[![License: BSL 1.1](https://img.shields.io/badge/license-BSL%201.1-lightgrey)](LICENSE)
-![tests](https://img.shields.io/badge/pytest-73%20passed-brightgreen) ![lean](https://img.shields.io/badge/Lean%204-46%20theorems%2C%200%20sorry-brightgreen)
+[![Open in Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Open%20in%20Spaces-live%20demo-blue)](https://huggingface.co/spaces/Optitransfer/sovereign-hospital-federation)
+[![License: BSL 1.1](https://img.shields.io/badge/license-BSL--1.1-lightgrey)](LICENSE)
+![tests](https://img.shields.io/badge/pytest-73%20passed-brightgreen)
+![Lean 4 proofs](https://img.shields.io/badge/Lean%204-46%20theorems%2C%200%20sorry-brightgreen)
+![Python](https://img.shields.io/badge/python-3.12%2B-3776AB?logo=python&logoColor=white)
+![Rust](https://img.shields.io/badge/rust-acfa--rs%20(pinned)-000000?logo=rust)
+
+![Sovereign Hospital Federation: leaderless federated learning across hospitals](docs/social-preview.png)
 
 Five simulated peers take part: CH (nFADP), and DE, FR, AT and IT (EU GDPR). Four are honest and IT is a toggleable adversary. They train a 738-parameter clinical-risk MLP on **synthetic** patient tables.
 
@@ -26,6 +31,15 @@ Five simulated peers take part: CH (nFADP), and DE, FR, AT and IT (EU GDPR). Fou
 ![system](docs/diagrams/system.png)
 
 The per-round sequence ([round.png](docs/diagrams/round.png)) and the proof map ([proofmap.png](docs/diagrams/proofmap.png)) are in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). The Mermaid sources are in [docs/diagrams/](docs/diagrams/).
+
+## Why no coordinator
+
+In classic federated learning, a server collects every hospital's update, aggregates them and sends the model back. That server is a single point of trust, failure and legal exposure:
+- it sees every update;
+- it can drop or reorder contributions;
+- it has to live in *some* jurisdiction.
+
+This demo removes it. Every hospital receives the same signed contributions over a CRDT and computes the aggregate itself. A result counts only when a quorum of hospitals has signed the same root. Because 2Q > n + f, one dishonest hospital can't get a different model accepted, and a network split can't produce two accepted models. If too many peers are missing, the round **fails safe** and nothing is installed. Every hospital keeps a receipt it verified itself, and so can an outside auditor.
 
 ## Two modes and their honest trade-off
 
@@ -95,6 +109,45 @@ These numbers come from `python scripts/measure.py` on CPU in this repo (seed 7,
 - **Canary exposure:** ≈1.7 bits mean in every setting (chance ≈ 1–2). This is a null result: there is no measurable memorisation at this scale.
 - **Leaky node test:** 224 canary/PII hits at its own gateway, 0 delivered, and no raw data received by any peer.
 - **Budget halt:** with cap ε = 3, training halts before round 14.
+
+## Use cases
+
+- **Hospital networks and university medical centres:** train risk, triage or readmission models on data that may not be centralised, with a per-round audit trail for data-protection officers and ethics boards.
+- **Cross-border healthcare research:** multi-country studies where records stay under national law (GDPR member states, Switzerland), and evidence of what crossed which border is recorded per link.
+- **European Health Data Space (EHDS) style secondary use:** a pattern for federated analysis where data holders stay in control. Note that this is a technical demonstrator, not an EHDS-certified system.
+- **Pharma and clinical-trial consortia:** sponsors and sites learn jointly without pooling patient-level data, with robust aggregation against a faulty or malicious participant.
+- **Finance and insurance:** fraud or risk models across institutions that may not share customer records, where no single party should run the aggregator.
+- **Public sector:** agencies or regions that need a jointly trained model without appointing one of them as the central operator.
+
+## FAQ
+
+**Is this privacy-preserving?**
+Within stated limits, yes:
+- Raw patient records never leave a hospital, and every outgoing byte is scanned and logged.
+- Updates are protected by record-level differential privacy (ε reported per hospital, cap enforced). In blind mode they are also masked by pairwise secure aggregation.
+- Membership-inference and gradient-inversion attacks are run as evidence.
+- It does **not** give hospital-level privacy.
+- The DP mechanism itself is not formally verified.
+- Blind-mode disputes are commit-and-open, not zero-knowledge.
+
+See [threat-model.md](threat-model.md).
+
+**Is it GDPR compliant?**
+No software is "GDPR compliant" on its own; compliance depends on the controller, the legal basis and the deployment. This demo provides **technical evidence** that helps such an assessment: data locality, per-link egress logs with jurisdiction labels, DP budgets and verifiable aggregation. It uses synthetic data and is not legal advice.
+
+**How is this different from Flower or NVIDIA FLARE?**
+- [Flower](https://github.com/flwrlabs/flower) and [NVIDIA FLARE](https://github.com/NVIDIA/NVFlare) are mature, general-purpose federated-learning frameworks for real deployments, with many ML backends, and both are good choices for production federated learning.
+- Flower is built around a server that runs the aggregation strategy. NVIDIA FLARE also offers a swarm-learning workflow, where a client chosen each round aggregates and a server manages the job.
+- This repository is a small, focused **demonstrator** of a different trust model:
+  - no aggregator role at all; every hospital aggregates;
+  - acceptance by a **quorum of co-signed roots**;
+  - **verifiable receipts** checked by every node and offline;
+  - **Lean 4 proofs** of CRDT convergence and quorum intersection;
+  - one evidence bundle per round.
+- It trains a tiny model on synthetic data. It is not a replacement for those frameworks, and the ideas could be layered on top of them.
+
+**Can I use it in production?**
+Not under the free grant. The BSL 1.1 licence here allows research, education, evaluation and non-commercial pilots; production, commercial or hosted use needs a commercial licence (contact below).
 
 ## Run locally
 

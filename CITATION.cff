@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+type: software
+title: "Sovereign Hospital Federation: leaderless federated learning with verifiable receipts"
+abstract: >-
+  A coordinator-free (leaderless, peer-to-peer) federated learning demonstrator
+  for hospitals. Five hospital peers gossip signed contributions over a CRDT,
+  each runs ACFA aggregation locally and co-signs the resulting state root, and
+  a model is installed only with a quorum of matching co-signatures. It
+  includes differential privacy (DP-SGD with RDP accounting), pairwise-mask
+  secure aggregation, privacy-attack evidence, an offline-verifiable evidence
+  bundle, and Lean 4 proofs of CRDT convergence and quorum intersection.
+  Synthetic data only.
+authors:
+  - family-names: Gillespie
+    given-names: Ryan
+    affiliation: Optitransfer
+  - name: Optitransfer
+repository-code: "https://github.com/mgillr/sovereign-hospital-federation"
+url: "https://huggingface.co/spaces/Optitransfer/sovereign-hospital-federation"
+license: BUSL-1.1
+version: "1.0.0"
+date-released: "2026-10-18"
+keywords:
+  - federated learning
+  - decentralized federated learning
+  - differential privacy
+  - secure aggregation
+  - data sovereignty
+  - healthcare
+  - CRDT
+  - Byzantine fault tolerance
+  - verifiable computing
+  - formal verification
+  - Lean 4
